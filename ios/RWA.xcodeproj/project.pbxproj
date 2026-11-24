@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005DDC801DA84215B74B9AD2 /* Outfit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE28D19C3DD94EC0BD8C6FB0 /* Outfit-Medium.ttf */; };
+		09D49199C6D64020B81EE184 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BB6B78B88EC449394A6A9EA /* Outfit-SemiBold.ttf */; };
+		0B3229EE3ABB48A0AB36C525 /* Outfit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2C1CAE516704EBD8FB39197 /* Outfit-Black.ttf */; };
+		0C262B484E8346CCBD68100F /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C5E033BA91A4C3FB763991F /* Outfit-Light.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-RWA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-RWA.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		2E1AF3DA7DBE4C39818ACB74 /* Outfit-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5872648D04274C18A1B2C1F2 /* Outfit-ExtraLight.ttf */; };
+		6437F0B6055246358B5EA5DF /* Outfit-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76E86ECB1CF14E15A6CF2F8D /* Outfit-Thin.ttf */; };
 		716819C5698C92D14DEFE4F6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		761780EF2CA45674006654EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EE2CA45674006654EF /* SceneDelegate.swift */; };
+		7F461138661A4054B62D4282 /* Outfit-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA6BBE30EC504CB4B57AE214 /* Outfit-ExtraBold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		CD6BA3AEEE54468691A340CF /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5900CD9786644C178B2EAE4B /* Outfit-Regular.ttf */; };
+		E6CE685E57C94C54B3E6D225 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D55994A72624355B1ADA841 /* Outfit-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,13 +29,22 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RWA/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RWA/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = RWA/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2D55994A72624355B1ADA841 /* Outfit-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Bold.ttf"; path = "../src/assets/font/Outfit-Bold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-RWA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RWA.debug.xcconfig"; path = "Target Support Files/Pods-RWA/Pods-RWA.debug.xcconfig"; sourceTree = "<group>"; };
+		3BB6B78B88EC449394A6A9EA /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-SemiBold.ttf"; path = "../src/assets/font/Outfit-SemiBold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-RWA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RWA.release.xcconfig"; path = "Target Support Files/Pods-RWA/Pods-RWA.release.xcconfig"; sourceTree = "<group>"; };
+		5872648D04274C18A1B2C1F2 /* Outfit-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraLight.ttf"; path = "../src/assets/font/Outfit-ExtraLight.ttf"; sourceTree = "<group>"; };
+		5900CD9786644C178B2EAE4B /* Outfit-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Regular.ttf"; path = "../src/assets/font/Outfit-Regular.ttf"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-RWA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RWA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = RWA/AppDelegate.swift; sourceTree = "<group>"; };
 		761780EE2CA45674006654EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = RWA/SceneDelegate.swift; sourceTree = "<group>"; };
+		76E86ECB1CF14E15A6CF2F8D /* Outfit-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Thin.ttf"; path = "../src/assets/font/Outfit-Thin.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RWA/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C5E033BA91A4C3FB763991F /* Outfit-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Light.ttf"; path = "../src/assets/font/Outfit-Light.ttf"; sourceTree = "<group>"; };
+		AA6BBE30EC504CB4B57AE214 /* Outfit-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraBold.ttf"; path = "../src/assets/font/Outfit-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D2C1CAE516704EBD8FB39197 /* Outfit-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Black.ttf"; path = "../src/assets/font/Outfit-Black.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FE28D19C3DD94EC0BD8C6FB0 /* Outfit-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Medium.ttf"; path = "../src/assets/font/Outfit-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +81,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		605735C30B1147DB84FD7A80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D55994A72624355B1ADA841 /* Outfit-Bold.ttf */,
+				5900CD9786644C178B2EAE4B /* Outfit-Regular.ttf */,
+				D2C1CAE516704EBD8FB39197 /* Outfit-Black.ttf */,
+				76E86ECB1CF14E15A6CF2F8D /* Outfit-Thin.ttf */,
+				3BB6B78B88EC449394A6A9EA /* Outfit-SemiBold.ttf */,
+				5872648D04274C18A1B2C1F2 /* Outfit-ExtraLight.ttf */,
+				AA6BBE30EC504CB4B57AE214 /* Outfit-ExtraBold.ttf */,
+				FE28D19C3DD94EC0BD8C6FB0 /* Outfit-Medium.ttf */,
+				9C5E033BA91A4C3FB763991F /* Outfit-Light.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +113,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				605735C30B1147DB84FD7A80 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -164,6 +200,15 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				716819C5698C92D14DEFE4F6 /* PrivacyInfo.xcprivacy in Resources */,
+				E6CE685E57C94C54B3E6D225 /* Outfit-Bold.ttf in Resources */,
+				CD6BA3AEEE54468691A340CF /* Outfit-Regular.ttf in Resources */,
+				0B3229EE3ABB48A0AB36C525 /* Outfit-Black.ttf in Resources */,
+				6437F0B6055246358B5EA5DF /* Outfit-Thin.ttf in Resources */,
+				09D49199C6D64020B81EE184 /* Outfit-SemiBold.ttf in Resources */,
+				2E1AF3DA7DBE4C39818ACB74 /* Outfit-ExtraLight.ttf in Resources */,
+				7F461138661A4054B62D4282 /* Outfit-ExtraBold.ttf in Resources */,
+				005DDC801DA84215B74B9AD2 /* Outfit-Medium.ttf in Resources */,
+				0C262B484E8346CCBD68100F /* Outfit-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,13 +239,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RWA/Pods-RWA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RWA/Pods-RWA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -237,13 +278,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RWA/Pods-RWA-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RWA/Pods-RWA-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
