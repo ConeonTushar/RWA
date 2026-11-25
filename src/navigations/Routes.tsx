@@ -3,8 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { LOGIN_SCREEN, OTP_SCREEN } from './url';
 import { SCREENPARAMS } from './types';
-import LoginScreen from '../screens/LoginScreen';
-import OtpScreen from '../screens/OtpScreen';
+import LoginScreen from '../screens/Onboarding/LoginScreen';
+import OtpScreen from '../screens/Onboarding/OtpScreen';
 
 const Stack = createNativeStackNavigator<SCREENPARAMS>();
 const Routes = () => {

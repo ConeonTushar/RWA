@@ -14,11 +14,11 @@ import {
 } from 'react-native';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { COLORS, FONTS, FONTSIZE } from '../utils/font';
-import { hp, wp, textScale, vs } from '../utils/helper';
-import { IMAGES } from '../assets/Images';
-import { OTP_SCREEN } from '../navigations/url';
-import { SCREENPARAMS } from '../navigations/types';
+import { COLORS, FONTS, FONTSIZE } from '../../utils/font';
+import { hp, wp, textScale, vs } from '../../utils/helper';
+import { IMAGES } from '../../assets/Images';
+import { OTP_SCREEN } from '../../navigations/url';
+import { SCREENPARAMS } from '../../navigations/types';
 
 type OtpRouteProp = RouteProp<SCREENPARAMS, typeof OTP_SCREEN>;
 type OtpNavigationProp = NativeStackNavigationProp<

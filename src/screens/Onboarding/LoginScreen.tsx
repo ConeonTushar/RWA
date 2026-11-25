@@ -12,12 +12,12 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import InputBox from '../components/elements/InputBox';
-import { COLORS, FONTS, FONTSIZE } from '../utils/font';
-import { hp, wp, textScale, vs } from '../utils/helper';
-import { IMAGES } from '../assets/Images';
-import { OTP_SCREEN } from '../navigations/url';
-import { SCREENPARAMS } from '../navigations/types';
+import InputBox from '../../components/elements/InputBox';
+import { COLORS, FONTS, FONTSIZE } from '../../utils/font';
+import { hp, wp, textScale, vs } from '../../utils/helper';
+import { IMAGES } from '../../assets/Images';
+import { OTP_SCREEN } from '../../navigations/url';
+import { SCREENPARAMS } from '../../navigations/types';
 
 type LoginScreenNavigationProp = NativeStackNavigationProp<
   SCREENPARAMS,
@@ -65,7 +65,7 @@ const LoginScreen = () => {
       />
       <KeyboardAvoidingView
         style={styles.keyboardView}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'padding'}
       >
         <ScrollView
           contentContainerStyle={styles.scrollContent}
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontFamily: FONTS.BOLD_OUTFIT,
-    fontSize: FONTSIZE.l2,
+    fontSize: FONTSIZE.h4,
     color: COLORS.greenPrimary,
     textAlign: 'center',
     lineHeight: textScale(22),
