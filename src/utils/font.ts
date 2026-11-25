@@ -54,4 +54,22 @@ export const COLORS = {
   cardBorderSelected: '#0F0F11',
   greyMoon: '#E5E7EB',
   lightGrey: '#F9FAFB',
+
+  // Home & Dashboard colors
+  sosRed: '#EA1B28',
+  sosCircle: '#E53535',
+  sosGradientStart: '#FFD5DC',
+  sosGradientMid: '#FFF0F3',
+  charcoalText: '#262626',
+  statCardBorder: '#F0F0F2',
+  statTitleText: '#4B5563',
+  mutedText: '#A1A1AA',
+  shadowBlack: '#000000',
+
+  // Alert & Badge colors
+  badgeUrgentBg: '#FEE2E2',
+  badgeUrgentText: '#EF4444',
+  badgeWarningBg: '#FFEDD5',
+  badgeWarningText: '#C2410C',
+  dashedBorder: '#E5E7EB',
 };
