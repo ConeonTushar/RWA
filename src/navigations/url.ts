@@ -8,3 +8,12 @@ export const SOCIETY_ADDRESS_SCREEN = 'SocietyAddressScreen';
 export const SOCIETY_STRUCTURE_SCREEN = 'SocietyStructureScreen';
 export const SOCIETY_CONTACT_SCREEN = 'SocietyContactScreen';
 export const SOCIETY_DOCUMENTS_SCREEN = 'SocietyDocumentsScreen';
+
+// Bottom Tab Navigation
+export const MAIN_TAB_NAVIGATOR = 'MainTabNavigator';
+export const HOME_TAB = 'Home';
+export const APPROVAL_TAB = 'Approval';
+export const COMPLAINTS_TAB = 'Complaints';
+export const MONEY_TAB = 'Money';
+export const MORE_TAB = 'More';
+

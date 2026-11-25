@@ -11,6 +11,7 @@ import {
   SOCIETY_STRUCTURE_SCREEN,
   SOCIETY_CONTACT_SCREEN,
   SOCIETY_DOCUMENTS_SCREEN,
+  MAIN_TAB_NAVIGATOR,
 } from './url';
 import { SCREENPARAMS } from './types';
 import LoginScreen from '../screens/Onboarding/LoginScreen';
@@ -22,15 +23,21 @@ import SocietyAddressScreen from '../screens/Onboarding/SocietyAddressScreen';
 import SocietyStructureScreen from '../screens/Onboarding/SocietyStructureScreen';
 import SocietyContactScreen from '../screens/Onboarding/SocietyContactScreen';
 import SocietyDocumentsScreen from '../screens/Onboarding/SocietyDocumentsScreen';
+import BottomTabNavigator from './BottomTabNavigator';
 
 const Stack = createNativeStackNavigator<SCREENPARAMS>();
 const Routes = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={LOGIN_SCREEN}
+        initialRouteName={MAIN_TAB_NAVIGATOR}
         screenOptions={{ gestureEnabled: false }}
       >
+        <Stack.Screen
+          name={MAIN_TAB_NAVIGATOR}
+          component={BottomTabNavigator}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name={LOGIN_SCREEN}
           component={LoginScreen}

@@ -1,10 +1,11 @@
 import React from 'react';
-import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import { StatusBar, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Routes from './Routes';
 
 const AppNavigator = () => {
   return (
-    <SafeAreaView style={appNavigatoStyle.viewContainer}>
+    <SafeAreaView edges={['top']} style={appNavigatoStyle.viewContainer}>
       <Routes />
     </SafeAreaView>
   );
