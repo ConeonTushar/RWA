@@ -23,7 +23,8 @@ export const FONTSIZE = {
   tiny: textScale(12),
   minTiny: textScale(11),
   xsmall: textScale(10),
-  xxsmall: textScale(8),
+  xxsmall: textScale(9),
+  vtiny: textScale(8),
 };
 
 export const COLORS = {
@@ -46,4 +47,11 @@ export const COLORS = {
   textSecondary: '#6B7280',
   inputBorder: '#E5E7EB',
   placeholder: '#9CA3AF',
+  badgeGreenBg: '#E8F8EE',
+  badgeGreenText: '#16A34A',
+  avatarBg: '#D9D9D9',
+  cardBorder: '#E5E7EB',
+  cardBorderSelected: '#0F0F11',
+  greyMoon: '#E5E7EB',
+  lightGrey: '#F9FAFB',
 };

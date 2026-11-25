@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -32,6 +32,7 @@ export interface InputBoxProps extends Omit<TextInputProps, 'style'> {
   containerStyle?: StyleProp<ViewStyle>;
   inputContainerStyle?: StyleProp<ViewStyle>;
   labelStyle?: StyleProp<TextStyle>;
+  labelContainerStyle?: StyleProp<ViewStyle>;
   placeholderTextColor?: string;
 }
 
@@ -55,15 +56,26 @@ const InputBox: React.FC<InputBoxProps> = ({
   containerStyle,
   inputContainerStyle,
   labelStyle,
+  labelContainerStyle,
   placeholderTextColor,
+  onFocus,
+  onBlur,
   ...rest
 }) => {
+  const [isFocused, setIsFocused] = useState(false);
+
   return (
     <View style={[styles.container, containerStyle]}>
       {/* Floating Label */}
       {label && (
-        <View style={styles.labelContainer}>
-          <Text style={[styles.label, labelStyle]}>
+        <View style={[styles.labelContainer, labelContainerStyle]}>
+          <Text
+            style={[
+              styles.label,
+              isFocused && styles.labelFocused,
+              labelStyle,
+            ]}
+          >
             {label}
             {required && <Text style={styles.required}> *</Text>}
           </Text>
@@ -74,6 +86,7 @@ const InputBox: React.FC<InputBoxProps> = ({
       <View
         style={[
           styles.inputContainer,
+          isFocused && styles.inputContainerFocused,
           inputContainerStyle,
           error ? styles.errorBorder : undefined,
           multiline ? styles.multilineContainer : undefined,
@@ -99,6 +112,14 @@ const InputBox: React.FC<InputBoxProps> = ({
           editable={editable}
           maxLength={maxLength}
           textAlignVertical={multiline ? 'top' : 'center'}
+          onFocus={e => {
+            setIsFocused(true);
+            onFocus?.(e);
+          }}
+          onBlur={e => {
+            setIsFocused(false);
+            onBlur?.(e);
+          }}
           {...rest}
         />
 
@@ -122,17 +143,21 @@ const styles = StyleSheet.create({
 
   labelContainer: {
     position: 'absolute',
-    top: -10,
-    left: 32,
+    top: -9,
+    left: 20,
     zIndex: 2,
     backgroundColor: COLORS.white,
-    paddingHorizontal: 5,
+    paddingHorizontal: 6,
   },
 
   label: {
-    fontSize: FONTSIZE.minTiny,
+    fontSize: FONTSIZE.xsmall,
     fontFamily: FONTS.REGULAR_OUTFIT,
-    color: COLORS.lightBlack,
+    color: COLORS.textSecondary,
+  },
+
+  labelFocused: {
+    color: COLORS.darkText,
   },
 
   required: {
@@ -150,9 +175,13 @@ const styles = StyleSheet.create({
     minHeight: hp(6.2),
   },
 
+  inputContainerFocused: {
+    borderColor: COLORS.darkText,
+  },
+
   input: {
     flex: 1,
-    fontSize: FONTSIZE.tiny,
+    fontSize: FONTSIZE.minTiny,
     fontFamily: FONTS.REGULAR_OUTFIT,
     color: COLORS.darkText,
     paddingVertical: 10,
