@@ -72,4 +72,24 @@ export const COLORS = {
   badgeWarningBg: '#FFEDD5',
   badgeWarningText: '#C2410C',
   dashedBorder: '#E5E7EB',
+
+  // Approval screen specific colors
+  approvalCyanBorder: '#7BD5E2',
+  approvalCyanStart: '#F4FBFC',
+  approvalCyanEnd: '#CCEBF2',
+  approvalPeachBorder: '#F1CBB5',
+  approvalPeachStart: '#FFFDFB',
+  approvalPeachEnd: '#F6E0D2',
+  approvalChipActiveBg: '#D6F5E3',
+  approvalChipActiveText: '#0B6A4C',
+  approvalAmberBg: '#FEF3C7',
+  approvalAmberText: '#D97706',
+
+  // Resident detail screen colors
+  applicantMintBorder: '#82D8BE',
+  applicantMintStart: '#FFFFFF',
+  applicantMintEnd: '#E7FAF2',
+  registerGreen: '#16A34A',
+  ownerWaitingBg: '#FFEDD5',
+  ownerWaitingText: '#EA580C',
 };

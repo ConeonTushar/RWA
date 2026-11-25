@@ -14,6 +14,8 @@ import {
   MAIN_TAB_NAVIGATOR,
   NOTIFICATIONS_SCREEN,
   SOS_MONITOR_SCREEN,
+  RESIDENT_REQUEST_DETAIL_SCREEN,
+  REQUEST_MORE_INFO_SCREEN,
 } from './url';
 import { SCREENPARAMS } from './types';
 import LoginScreen from '../screens/Onboarding/LoginScreen';
@@ -28,6 +30,10 @@ import SocietyDocumentsScreen from '../screens/Onboarding/SocietyDocumentsScreen
 import BottomTabNavigator from './BottomTabNavigator';
 import { NotificationsScreen } from '../screens/Notifications';
 import { SosMonitorScreen } from '../screens/SosMonitor';
+import {
+  ResidentRequestDetailScreen,
+  RequestMoreInfoScreen,
+} from '../screens/Approvals';
 
 const Stack = createNativeStackNavigator<SCREENPARAMS>();
 const Routes = () => {
@@ -95,6 +101,16 @@ const Routes = () => {
         <Stack.Screen
           name={SOS_MONITOR_SCREEN}
           component={SosMonitorScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={RESIDENT_REQUEST_DETAIL_SCREEN}
+          component={ResidentRequestDetailScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={REQUEST_MORE_INFO_SCREEN}
+          component={RequestMoreInfoScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "pending",
+    "title": "Pending approvals",
+    "count": "08",
+    "borderColor": "#7BD5E2",
+    "gradientColors": ["#F4FBFC", "#CCEBF2"],
+    "iconName": "clock-outline",
+    "iconType": "MaterialCommunityIcons"
+  },
+  {
+    "id": "overdue",
+    "title": "Overdue",
+    "count": "02",
+    "borderColor": "#F1CBB5",
+    "gradientColors": ["#FFFDFB", "#F6E0D2"],
+    "iconName": "alert-circle-outline",
+    "iconType": "MaterialCommunityIcons"
+  }
+]

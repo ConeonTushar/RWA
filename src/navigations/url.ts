@@ -21,4 +21,8 @@ export const MORE_TAB = 'More';
 export const NOTIFICATIONS_SCREEN = 'NotificationsScreen';
 export const SOS_MONITOR_SCREEN = 'SosMonitorScreen';
 
+// Approvals screens
+export const RESIDENT_REQUEST_DETAIL_SCREEN = 'ResidentRequestDetailScreen';
+export const REQUEST_MORE_INFO_SCREEN = 'RequestMoreInfoScreen';
+
 

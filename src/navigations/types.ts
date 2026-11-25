@@ -12,7 +12,17 @@ import {
   MAIN_TAB_NAVIGATOR,
   NOTIFICATIONS_SCREEN,
   SOS_MONITOR_SCREEN,
+  RESIDENT_REQUEST_DETAIL_SCREEN,
+  REQUEST_MORE_INFO_SCREEN,
 } from './url';
+import type { ApprovalItemData } from '../components/approvals';
+
+export interface RequestMoreInfoScreenParams {
+  item?: ApprovalItemData;
+  mode?: 'request_info' | 'reject';
+  title?: string;
+  buttonLabel?: string;
+}
 
 export type SCREENPARAMS = {
   [LOGIN_SCREEN]: undefined;
@@ -27,6 +37,8 @@ export type SCREENPARAMS = {
   [MAIN_TAB_NAVIGATOR]: undefined;
   [NOTIFICATIONS_SCREEN]: undefined;
   [SOS_MONITOR_SCREEN]: { alertId?: string } | undefined;
+  [RESIDENT_REQUEST_DETAIL_SCREEN]: { item?: ApprovalItemData } | undefined;
+  [REQUEST_MORE_INFO_SCREEN]: RequestMoreInfoScreenParams | undefined;
 };
 
 export const navigationRef: any = React.createRef();
