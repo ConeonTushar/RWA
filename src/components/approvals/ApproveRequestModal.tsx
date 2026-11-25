@@ -13,21 +13,33 @@ import VectorIcon from '../elements/VectorIcon';
 
 export interface ApproveRequestModalProps {
   visible: boolean;
+  title?: string;
   applicantName?: string;
   roleName?: string;
   flatNumber?: string;
+  description?: string;
+  subNote?: string;
+  confirmButtonLabel?: string;
+  cancelButtonLabel?: string;
   onConfirm: () => void;
   onCancel: () => void;
 }
 
 const ApproveRequestModal: React.FC<ApproveRequestModalProps> = ({
   visible,
+  title = 'Approve resident request?',
   applicantName = 'Rahul Sharma',
   roleName = 'a family member',
   flatNumber = 'Flat B-204',
+  description,
+  subNote = 'The resident will receive access and a notification.',
+  confirmButtonLabel = 'Confirm approval',
+  cancelButtonLabel = 'Cancel',
   onConfirm,
   onCancel,
 }) => {
+  const displayDescription =
+    description || `You are approving ${applicantName} as ${roleName} for ${flatNumber}.`;
   return (
     <Modal
       visible={visible}
@@ -51,39 +63,35 @@ const ApproveRequestModal: React.FC<ApproveRequestModalProps> = ({
                 color={COLORS.greenPrimary}
               />
             </View>
-            <Text style={styles.headerTitle}>Approve resident request?</Text>
+            <Text style={styles.headerTitle}>{title}</Text>
           </View>
 
           {/* Body Statement */}
-          <Text style={styles.bodyText}>
-            You are approving {applicantName} as {roleName} for {flatNumber}.
-          </Text>
+          <Text style={styles.bodyText}>{displayDescription}</Text>
 
           {/* Informational Subtitle */}
-          <Text style={styles.subNoteText}>
-            The resident will receive access and a notification.
-          </Text>
+          <Text style={styles.subNoteText}>{subNote}</Text>
 
           {/* Action Buttons */}
           <View style={styles.buttonsContainer}>
             <TouchableOpacity
               accessibilityRole="button"
-              accessibilityLabel="Confirm approval"
+              accessibilityLabel={confirmButtonLabel}
               activeOpacity={0.8}
               onPress={onConfirm}
               style={styles.confirmButton}
             >
-              <Text style={styles.confirmButtonText}>Confirm approval</Text>
+              <Text style={styles.confirmButtonText}>{confirmButtonLabel}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               accessibilityRole="button"
-              accessibilityLabel="Cancel"
+              accessibilityLabel={cancelButtonLabel}
               activeOpacity={0.8}
               onPress={onCancel}
               style={styles.cancelButton}
             >
-              <Text style={styles.cancelButtonText}>Cancel</Text>
+              <Text style={styles.cancelButtonText}>{cancelButtonLabel}</Text>
             </TouchableOpacity>
           </View>
         </View>
