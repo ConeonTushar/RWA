@@ -1,10 +1,27 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { LOGIN_SCREEN, OTP_SCREEN } from './url';
+import {
+  LOGIN_SCREEN,
+  OTP_SCREEN,
+  SELECT_SOCIETY_SCREEN,
+  PROFILE_SCREEN,
+  SOCIETY_BASICS_SCREEN,
+  SOCIETY_ADDRESS_SCREEN,
+  SOCIETY_STRUCTURE_SCREEN,
+  SOCIETY_CONTACT_SCREEN,
+  SOCIETY_DOCUMENTS_SCREEN,
+} from './url';
 import { SCREENPARAMS } from './types';
 import LoginScreen from '../screens/Onboarding/LoginScreen';
 import OtpScreen from '../screens/Onboarding/OtpScreen';
+import SelectSocietyScreen from '../screens/Onboarding/SelectSocietyScreen';
+import ProfileScreen from '../screens/Onboarding/ProfileScreen';
+import SocietyBasicsScreen from '../screens/Onboarding/SocietyBasicsScreen';
+import SocietyAddressScreen from '../screens/Onboarding/SocietyAddressScreen';
+import SocietyStructureScreen from '../screens/Onboarding/SocietyStructureScreen';
+import SocietyContactScreen from '../screens/Onboarding/SocietyContactScreen';
+import SocietyDocumentsScreen from '../screens/Onboarding/SocietyDocumentsScreen';
 
 const Stack = createNativeStackNavigator<SCREENPARAMS>();
 const Routes = () => {
@@ -22,6 +39,41 @@ const Routes = () => {
         <Stack.Screen
           name={OTP_SCREEN}
           component={OtpScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SELECT_SOCIETY_SCREEN}
+          component={SelectSocietyScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={PROFILE_SCREEN}
+          component={ProfileScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SOCIETY_BASICS_SCREEN}
+          component={SocietyBasicsScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SOCIETY_ADDRESS_SCREEN}
+          component={SocietyAddressScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SOCIETY_STRUCTURE_SCREEN}
+          component={SocietyStructureScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SOCIETY_CONTACT_SCREEN}
+          component={SocietyContactScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SOCIETY_DOCUMENTS_SCREEN}
+          component={SocietyDocumentsScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

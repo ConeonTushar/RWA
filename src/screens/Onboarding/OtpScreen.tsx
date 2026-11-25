@@ -17,8 +17,9 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { COLORS, FONTS, FONTSIZE } from '../../utils/font';
 import { hp, wp, textScale, vs } from '../../utils/helper';
 import { IMAGES } from '../../assets/Images';
-import { OTP_SCREEN } from '../../navigations/url';
+import { OTP_SCREEN, SELECT_SOCIETY_SCREEN } from '../../navigations/url';
 import { SCREENPARAMS } from '../../navigations/types';
+import SubmitButton from '../../components/elements/SubmitButton';
 
 type OtpRouteProp = RouteProp<SCREENPARAMS, typeof OTP_SCREEN>;
 type OtpNavigationProp = NativeStackNavigationProp<
@@ -94,7 +95,8 @@ const OtpScreen = () => {
       setError('Please enter all 4 digits');
       return;
     }
-    // Handle OTP verification success
+    // Navigate to society selection screen
+    navigation.navigate(SELECT_SOCIETY_SCREEN as any);
   };
 
   const handleResend = () => {
@@ -114,7 +116,8 @@ const OtpScreen = () => {
 
       <KeyboardAvoidingView
         style={styles.keyboardView}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={Platform.OS === 'ios' ? vs(10) : 0}
       >
         <ScrollView
           contentContainerStyle={styles.scrollContent}
@@ -208,13 +211,11 @@ const OtpScreen = () => {
             </View>
 
             {/* Verify Button */}
-            <TouchableOpacity
-              style={styles.verifyButton}
-              activeOpacity={0.85}
+            <SubmitButton
+              title="Verify & Continue"
               onPress={handleVerify}
-            >
-              <Text style={styles.verifyButtonText}>Verify & Continue</Text>
-            </TouchableOpacity>
+              containerStyle={styles.verifyButtonContainer}
+            />
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -347,18 +348,8 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.tiny,
     color: COLORS.darkText,
   },
-  verifyButton: {
-    backgroundColor: COLORS.darkBtn,
-    borderRadius: 14,
-    height: vs(48),
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: vs(8),
-    marginBottom: vs(8),
-  },
-  verifyButtonText: {
-    fontFamily: FONTS.SEMI_OUTFIT,
-    fontSize: FONTSIZE.tiny,
-    color: COLORS.white,
+  verifyButtonContainer: {
+    paddingTop: vs(8),
+    paddingBottom: vs(8),
   },
 });

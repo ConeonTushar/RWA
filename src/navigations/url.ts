@@ -1,2 +1,10 @@
 export const LOGIN_SCREEN = 'LoginScreen';
 export const OTP_SCREEN = 'OtpScreen';
+export const SELECT_SOCIETY_SCREEN = 'SelectSocietyScreen';
+export const PROFILE_SCREEN = 'ProfileScreen';
+export const TELL_US_ABOUT_YOURSELF_SCREEN = 'ProfileScreen';
+export const SOCIETY_BASICS_SCREEN = 'SocietyBasicsScreen';
+export const SOCIETY_ADDRESS_SCREEN = 'SocietyAddressScreen';
+export const SOCIETY_STRUCTURE_SCREEN = 'SocietyStructureScreen';
+export const SOCIETY_CONTACT_SCREEN = 'SocietyContactScreen';
+export const SOCIETY_DOCUMENTS_SCREEN = 'SocietyDocumentsScreen';

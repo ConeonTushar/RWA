@@ -7,12 +7,12 @@ import {
   StatusBar,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import InputBox from '../../components/elements/InputBox';
+import SubmitButton from '../../components/elements/SubmitButton';
 import { COLORS, FONTS, FONTSIZE } from '../../utils/font';
 import { hp, wp, textScale, vs } from '../../utils/helper';
 import { IMAGES } from '../../assets/Images';
@@ -109,13 +109,11 @@ const LoginScreen = () => {
               inputStyle={styles.textInputStyle}
             />
 
-            <TouchableOpacity
-              style={styles.continueButton}
-              activeOpacity={0.85}
+            <SubmitButton
+              title="Continue"
               onPress={handleContinue}
-            >
-              <Text style={styles.continueButtonText}>Continue</Text>
-            </TouchableOpacity>
+              containerStyle={styles.continueButtonContainer}
+            />
 
             <Text style={styles.footerText}>
               By continuing, you agree to our{' '}
@@ -152,7 +150,7 @@ const styles = StyleSheet.create({
   },
   topSection: {
     alignItems: 'center',
-    paddingTop: vs(70),
+    paddingTop: vs(50),
     justifyContent: 'center',
   },
   headerTitle: {
@@ -212,19 +210,9 @@ const styles = StyleSheet.create({
     color: COLORS.darkText,
     paddingVertical: 0,
   },
-  continueButton: {
-    backgroundColor: COLORS.darkBtn,
-    borderRadius: 14,
-    height: vs(48),
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: vs(20),
-    marginBottom: vs(14),
-  },
-  continueButtonText: {
-    fontFamily: FONTS.SEMI_OUTFIT,
-    fontSize: FONTSIZE.tiny,
-    color: COLORS.white,
+  continueButtonContainer: {
+    paddingTop: vs(20),
+    paddingBottom: vs(14),
   },
   footerText: {
     fontFamily: FONTS.REGULAR_OUTFIT,
