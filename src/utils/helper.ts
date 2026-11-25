@@ -55,3 +55,4 @@ export const isIphoneXorAbove = () => {
 };
 export const hs = (size: number) => (width / guidelineBaseWidth) * size;
 export const vs = (size: number) => (height / guidelineBaseHeight) * size;
+export const isAndroid = Platform.OS === 'android';

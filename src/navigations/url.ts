@@ -17,3 +17,8 @@ export const COMPLAINTS_TAB = 'Complaints';
 export const MONEY_TAB = 'Money';
 export const MORE_TAB = 'More';
 
+// Notifications & Alert screens
+export const NOTIFICATIONS_SCREEN = 'NotificationsScreen';
+export const SOS_MONITOR_SCREEN = 'SosMonitorScreen';
+
+

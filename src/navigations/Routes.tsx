@@ -12,6 +12,8 @@ import {
   SOCIETY_CONTACT_SCREEN,
   SOCIETY_DOCUMENTS_SCREEN,
   MAIN_TAB_NAVIGATOR,
+  NOTIFICATIONS_SCREEN,
+  SOS_MONITOR_SCREEN,
 } from './url';
 import { SCREENPARAMS } from './types';
 import LoginScreen from '../screens/Onboarding/LoginScreen';
@@ -24,6 +26,8 @@ import SocietyStructureScreen from '../screens/Onboarding/SocietyStructureScreen
 import SocietyContactScreen from '../screens/Onboarding/SocietyContactScreen';
 import SocietyDocumentsScreen from '../screens/Onboarding/SocietyDocumentsScreen';
 import BottomTabNavigator from './BottomTabNavigator';
+import { NotificationsScreen } from '../screens/Notifications';
+import { SosMonitorScreen } from '../screens/SosMonitor';
 
 const Stack = createNativeStackNavigator<SCREENPARAMS>();
 const Routes = () => {
@@ -81,6 +85,16 @@ const Routes = () => {
         <Stack.Screen
           name={SOCIETY_DOCUMENTS_SCREEN}
           component={SocietyDocumentsScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={NOTIFICATIONS_SCREEN}
+          component={NotificationsScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SOS_MONITOR_SCREEN}
+          component={SosMonitorScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

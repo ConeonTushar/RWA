@@ -10,6 +10,8 @@ import {
   SOCIETY_CONTACT_SCREEN,
   SOCIETY_DOCUMENTS_SCREEN,
   MAIN_TAB_NAVIGATOR,
+  NOTIFICATIONS_SCREEN,
+  SOS_MONITOR_SCREEN,
 } from './url';
 
 export type SCREENPARAMS = {
@@ -23,6 +25,8 @@ export type SCREENPARAMS = {
   [SOCIETY_CONTACT_SCREEN]: undefined;
   [SOCIETY_DOCUMENTS_SCREEN]: undefined;
   [MAIN_TAB_NAVIGATOR]: undefined;
+  [NOTIFICATIONS_SCREEN]: undefined;
+  [SOS_MONITOR_SCREEN]: { alertId?: string } | undefined;
 };
 
 export const navigationRef: any = React.createRef();
