@@ -24,5 +24,8 @@ export const SOS_MONITOR_SCREEN = 'SosMonitorScreen';
 // Approvals screens
 export const RESIDENT_REQUEST_DETAIL_SCREEN = 'ResidentRequestDetailScreen';
 export const REQUEST_MORE_INFO_SCREEN = 'RequestMoreInfoScreen';
+export const VENDOR_REQUEST_DETAIL_SCREEN = 'VendorRequestDetailScreen';
+export const PERMISSION_REQUEST_DETAIL_SCREEN = 'PermissionRequestDetailScreen';
+export const BOOKING_APPROVAL_DETAIL_SCREEN = 'BookingApprovalDetailScreen';
 
 

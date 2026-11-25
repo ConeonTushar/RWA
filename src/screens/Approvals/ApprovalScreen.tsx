@@ -25,6 +25,9 @@ import VectorIcon from '../../components/elements/VectorIcon';
 import {
   NOTIFICATIONS_SCREEN,
   RESIDENT_REQUEST_DETAIL_SCREEN,
+  VENDOR_REQUEST_DETAIL_SCREEN,
+  PERMISSION_REQUEST_DETAIL_SCREEN,
+  BOOKING_APPROVAL_DETAIL_SCREEN,
 } from '../../navigations/url';
 
 // Mock approvals dataset matching the design
@@ -103,11 +106,11 @@ const MOCK_APPROVALS: ApprovalItemData[] = [
   {
     id: 'ven-1',
     category: 'vendors',
-    title: 'Urban Clad Cleaning',
-    subtitle: 'Deep cleaning staff entry · 3 workers',
+    title: 'CleanPro Services',
+    subtitle: 'Housekeeping and cleaning · Registered vendor',
     badgeLabel: 'Waiting 1 day',
     badgeVariant: 'urgent',
-    detailText: 'Service pass requested by B-301',
+    detailText: 'Housekeeping pass requested',
     showDetailBullet: true,
     submittedText: 'Submitted 18 Nov · 02:00 PM',
   },
@@ -203,7 +206,18 @@ const ApprovalScreen: React.FC = () => {
   };
 
   const handleItemPress = (item: ApprovalItemData) => {
-    navigation.navigate(RESIDENT_REQUEST_DETAIL_SCREEN, { item });
+    if (item.category === 'vendors') {
+      navigation.navigate(VENDOR_REQUEST_DETAIL_SCREEN, { item });
+    } else if (item.category === 'permissions') {
+      const lower = item.title.toLowerCase();
+      if (lower.includes('clubhouse') || lower.includes('booking')) {
+        navigation.navigate(BOOKING_APPROVAL_DETAIL_SCREEN, { item });
+      } else {
+        navigation.navigate(PERMISSION_REQUEST_DETAIL_SCREEN, { item });
+      }
+    } else {
+      navigation.navigate(RESIDENT_REQUEST_DETAIL_SCREEN, { item });
+    }
   };
 
   return (

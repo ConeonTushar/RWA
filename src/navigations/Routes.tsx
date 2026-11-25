@@ -16,6 +16,9 @@ import {
   SOS_MONITOR_SCREEN,
   RESIDENT_REQUEST_DETAIL_SCREEN,
   REQUEST_MORE_INFO_SCREEN,
+  VENDOR_REQUEST_DETAIL_SCREEN,
+  PERMISSION_REQUEST_DETAIL_SCREEN,
+  BOOKING_APPROVAL_DETAIL_SCREEN,
 } from './url';
 import { SCREENPARAMS } from './types';
 import LoginScreen from '../screens/Onboarding/LoginScreen';
@@ -33,6 +36,9 @@ import { SosMonitorScreen } from '../screens/SosMonitor';
 import {
   ResidentRequestDetailScreen,
   RequestMoreInfoScreen,
+  VendorRequestDetailScreen,
+  PermissionRequestDetailScreen,
+  BookingApprovalDetailScreen,
 } from '../screens/Approvals';
 
 const Stack = createNativeStackNavigator<SCREENPARAMS>();
@@ -111,6 +117,21 @@ const Routes = () => {
         <Stack.Screen
           name={REQUEST_MORE_INFO_SCREEN}
           component={RequestMoreInfoScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={VENDOR_REQUEST_DETAIL_SCREEN}
+          component={VendorRequestDetailScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={PERMISSION_REQUEST_DETAIL_SCREEN}
+          component={PermissionRequestDetailScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={BOOKING_APPROVAL_DETAIL_SCREEN}
+          component={BookingApprovalDetailScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

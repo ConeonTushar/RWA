@@ -54,16 +54,18 @@ const ApprovalDetailActionButtons: React.FC<ApprovalDetailActionButtonsProps> = 
       </TouchableOpacity>
 
       {/* Tertiary Action Link */}
-      <TouchableOpacity
-        accessibilityRole="button"
-        accessibilityLabel={askMoreInfoLabel}
-        activeOpacity={0.7}
-        onPress={onAskMoreInfo}
-        style={styles.askButton}
-        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-      >
-        <Text style={styles.askText}>{askMoreInfoLabel}</Text>
-      </TouchableOpacity>
+      {onAskMoreInfo && (
+        <TouchableOpacity
+          accessibilityRole="button"
+          accessibilityLabel={askMoreInfoLabel}
+          activeOpacity={0.7}
+          onPress={onAskMoreInfo}
+          style={styles.askButton}
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+        >
+          <Text style={styles.askText}>{askMoreInfoLabel}</Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 };

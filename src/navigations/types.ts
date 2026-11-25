@@ -14,6 +14,9 @@ import {
   SOS_MONITOR_SCREEN,
   RESIDENT_REQUEST_DETAIL_SCREEN,
   REQUEST_MORE_INFO_SCREEN,
+  VENDOR_REQUEST_DETAIL_SCREEN,
+  PERMISSION_REQUEST_DETAIL_SCREEN,
+  BOOKING_APPROVAL_DETAIL_SCREEN,
 } from './url';
 import type { ApprovalItemData } from '../components/approvals';
 
@@ -39,6 +42,9 @@ export type SCREENPARAMS = {
   [SOS_MONITOR_SCREEN]: { alertId?: string } | undefined;
   [RESIDENT_REQUEST_DETAIL_SCREEN]: { item?: ApprovalItemData } | undefined;
   [REQUEST_MORE_INFO_SCREEN]: RequestMoreInfoScreenParams | undefined;
+  [VENDOR_REQUEST_DETAIL_SCREEN]: { item?: ApprovalItemData } | undefined;
+  [PERMISSION_REQUEST_DETAIL_SCREEN]: { item?: ApprovalItemData } | undefined;
+  [BOOKING_APPROVAL_DETAIL_SCREEN]: { item?: ApprovalItemData } | undefined;
 };
 
 export const navigationRef: any = React.createRef();

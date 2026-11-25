@@ -16,7 +16,9 @@ import {
   ResidentRequestHeader,
   ApplicantSummaryCard,
 } from '../../components/approvals';
-import CustomDropdown, { DropdownItem } from '../../components/elements/CustomDropdown';
+import CustomDropdown, {
+  DropdownItem,
+} from '../../components/elements/CustomDropdown';
 import InputBox from '../../components/elements/InputBox';
 import VectorIcon from '../../components/elements/VectorIcon';
 import { SCREENPARAMS } from '../../navigations/types';
@@ -44,11 +46,21 @@ const RequestMoreInfoScreen: React.FC = () => {
     route.params?.buttonLabel || (mode === 'reject' ? 'Reject' : 'Send');
 
   const applicantName = item?.title || 'Rahul Sharma';
-  const roleName = item?.detailText?.replace('Requested role: ', '') || 'Family member';
-  const flatNumber = item?.subtitle ? item.subtitle.split('·')[0].trim() : 'Flat B-204';
+  const roleName =
+    item?.detailText?.replace('Requested role: ', '') || 'Family member';
+  const flatNumber = item?.subtitle
+    ? item.subtitle.split('·')[0].trim()
+    : 'Flat B-204';
+  const itemCategory = item?.category;
+  const statusLabel =
+    itemCategory === 'permissions'
+      ? 'Permission request'
+      : itemCategory === 'vendors'
+      ? 'Registered vendor'
+      : 'Applicant';
 
   const [selectedReason, setSelectedReason] = useState<string | number | null>(
-    null
+    null,
   );
   const [message, setMessage] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -64,14 +76,14 @@ const RequestMoreInfoScreen: React.FC = () => {
     }
     setError('');
 
-    const reasonObj = REASON_OPTIONS.find((r) => r.id === selectedReason);
+    const reasonObj = REASON_OPTIONS.find(r => r.id === selectedReason);
 
     if (mode === 'reject') {
       Alert.alert(
         'Request Rejected',
-        `Request for ${applicantName} has been rejected.\nReason: ${reasonObj?.name}${
-          message.trim() ? `\nMessage: ${message}` : ''
-        }`,
+        `Request for ${applicantName} has been rejected.\nReason: ${
+          reasonObj?.name
+        }${message.trim() ? `\nMessage: ${message}` : ''}`,
         [
           {
             text: 'OK',
@@ -80,7 +92,7 @@ const RequestMoreInfoScreen: React.FC = () => {
               navigation.popToTop();
             },
           },
-        ]
+        ],
       );
     } else {
       Alert.alert(
@@ -95,7 +107,7 @@ const RequestMoreInfoScreen: React.FC = () => {
               navigation.goBack();
             },
           },
-        ]
+        ],
       );
     }
   };
@@ -114,20 +126,18 @@ const RequestMoreInfoScreen: React.FC = () => {
         showsVerticalScrollIndicator={false}
       >
         {/* Header with back navigation */}
-        <ResidentRequestHeader
-          title={customTitle}
-          onBackPress={handleBack}
-        />
+        <ResidentRequestHeader title={customTitle} onBackPress={handleBack} />
 
         {/* Top applicant card */}
         <ApplicantSummaryCard
           name={applicantName}
           role={
-            flatNumber.includes('·')
+            item?.subtitle ||
+            (flatNumber.includes('·')
               ? flatNumber
-              : `${flatNumber} · ${roleName}`
+              : `${flatNumber} · ${roleName}`)
           }
-          status="Applicant"
+          status={statusLabel}
           containerStyle={styles.topCard}
         />
 
@@ -138,7 +148,7 @@ const RequestMoreInfoScreen: React.FC = () => {
             required={true}
             data={REASON_OPTIONS}
             value={selectedReason}
-            onChange={(val) => {
+            onChange={val => {
               setSelectedReason(val);
               if (error) setError('');
             }}
