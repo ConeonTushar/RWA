@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  SPLASH_SCREEN,
   LOGIN_SCREEN,
   OTP_SCREEN,
   SELECT_SOCIETY_SCREEN,
@@ -43,6 +44,7 @@ export interface RequestMoreInfoScreenParams {
 }
 
 export type SCREENPARAMS = {
+  [SPLASH_SCREEN]: undefined;
   [LOGIN_SCREEN]: undefined;
   [OTP_SCREEN]: { mobile: string };
   [SELECT_SOCIETY_SCREEN]: undefined;

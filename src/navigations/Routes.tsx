@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
+  SPLASH_SCREEN,
   LOGIN_SCREEN,
   OTP_SCREEN,
   SELECT_SOCIETY_SCREEN,
@@ -34,6 +35,7 @@ import {
   REPORTS_SUMMARY_SCREEN,
 } from './url';
 import { SCREENPARAMS } from './types';
+import SplashScreen from '../screens/Onboarding/SplashScreen';
 import LoginScreen from '../screens/Onboarding/LoginScreen';
 import OtpScreen from '../screens/Onboarding/OtpScreen';
 import SelectSocietyScreen from '../screens/Onboarding/SelectSocietyScreen';
@@ -82,6 +84,11 @@ const Routes = () => {
         <Stack.Screen
           name={MAIN_TAB_NAVIGATOR}
           component={BottomTabNavigator}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SPLASH_SCREEN}
+          component={SplashScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

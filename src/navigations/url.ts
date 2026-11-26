@@ -1,3 +1,4 @@
+export const SPLASH_SCREEN = 'SplashScreen';
 export const LOGIN_SCREEN = 'LoginScreen';
 export const OTP_SCREEN = 'OtpScreen';
 export const SELECT_SOCIETY_SCREEN = 'SelectSocietyScreen';
