@@ -17,8 +17,13 @@ import {
   VENDOR_REQUEST_DETAIL_SCREEN,
   PERMISSION_REQUEST_DETAIL_SCREEN,
   BOOKING_APPROVAL_DETAIL_SCREEN,
+  COMPLAINT_DETAIL_SCREEN,
+  ASSIGN_COMPLAINT_SCREEN,
+  UPDATE_COMPLAINT_SCREEN,
+  COMPLAINT_SUMMARY_SCREEN,
 } from './url';
 import type { ApprovalItemData } from '../components/approvals';
+import type { ComplaintItemData } from '../components/complaints';
 
 export interface RequestMoreInfoScreenParams {
   item?: ApprovalItemData;
@@ -45,6 +50,10 @@ export type SCREENPARAMS = {
   [VENDOR_REQUEST_DETAIL_SCREEN]: { item?: ApprovalItemData } | undefined;
   [PERMISSION_REQUEST_DETAIL_SCREEN]: { item?: ApprovalItemData } | undefined;
   [BOOKING_APPROVAL_DETAIL_SCREEN]: { item?: ApprovalItemData } | undefined;
+  [COMPLAINT_DETAIL_SCREEN]: { item?: ComplaintItemData } | undefined;
+  [ASSIGN_COMPLAINT_SCREEN]: { item?: ComplaintItemData } | undefined;
+  [UPDATE_COMPLAINT_SCREEN]: { item?: ComplaintItemData } | undefined;
+  [COMPLAINT_SUMMARY_SCREEN]: undefined;
 };
 
 export const navigationRef: any = React.createRef();

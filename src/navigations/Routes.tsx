@@ -19,6 +19,10 @@ import {
   VENDOR_REQUEST_DETAIL_SCREEN,
   PERMISSION_REQUEST_DETAIL_SCREEN,
   BOOKING_APPROVAL_DETAIL_SCREEN,
+  COMPLAINT_DETAIL_SCREEN,
+  ASSIGN_COMPLAINT_SCREEN,
+  UPDATE_COMPLAINT_SCREEN,
+  COMPLAINT_SUMMARY_SCREEN,
 } from './url';
 import { SCREENPARAMS } from './types';
 import LoginScreen from '../screens/Onboarding/LoginScreen';
@@ -40,6 +44,12 @@ import {
   PermissionRequestDetailScreen,
   BookingApprovalDetailScreen,
 } from '../screens/Approvals';
+import {
+  ComplaintDetailScreen,
+  AssignComplaintScreen,
+  UpdateComplaintScreen,
+  ComplaintSummaryScreen,
+} from '../screens/Complaints';
 
 const Stack = createNativeStackNavigator<SCREENPARAMS>();
 const Routes = () => {
@@ -132,6 +142,26 @@ const Routes = () => {
         <Stack.Screen
           name={BOOKING_APPROVAL_DETAIL_SCREEN}
           component={BookingApprovalDetailScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={COMPLAINT_DETAIL_SCREEN}
+          component={ComplaintDetailScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={ASSIGN_COMPLAINT_SCREEN}
+          component={AssignComplaintScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={UPDATE_COMPLAINT_SCREEN}
+          component={UpdateComplaintScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={COMPLAINT_SUMMARY_SCREEN}
+          component={ComplaintSummaryScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

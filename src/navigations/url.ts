@@ -28,4 +28,10 @@ export const VENDOR_REQUEST_DETAIL_SCREEN = 'VendorRequestDetailScreen';
 export const PERMISSION_REQUEST_DETAIL_SCREEN = 'PermissionRequestDetailScreen';
 export const BOOKING_APPROVAL_DETAIL_SCREEN = 'BookingApprovalDetailScreen';
 
+// Complaints screens
+export const COMPLAINT_DETAIL_SCREEN = 'ComplaintDetailScreen';
+export const ASSIGN_COMPLAINT_SCREEN = 'AssignComplaintScreen';
+export const UPDATE_COMPLAINT_SCREEN = 'UpdateComplaintScreen';
+export const COMPLAINT_SUMMARY_SCREEN = 'ComplaintSummaryScreen';
+
 
