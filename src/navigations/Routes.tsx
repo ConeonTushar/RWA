@@ -23,6 +23,15 @@ import {
   ASSIGN_COMPLAINT_SCREEN,
   UPDATE_COMPLAINT_SCREEN,
   COMPLAINT_SUMMARY_SCREEN,
+  DUES_BY_FLAT_SCREEN,
+  FLAT_LEDGER_SCREEN,
+  SEND_REMINDERS_SCREEN,
+  RECORD_PAYMENT_SCREEN,
+  ADD_CHARGE_OR_WAIVER_SCREEN,
+  EXPENSE_SUMMARY_SCREEN,
+  ADD_EXPENSE_SCREEN,
+  EXPENSE_APPROVAL_SCREEN,
+  REPORTS_SUMMARY_SCREEN,
 } from './url';
 import { SCREENPARAMS } from './types';
 import LoginScreen from '../screens/Onboarding/LoginScreen';
@@ -50,6 +59,17 @@ import {
   UpdateComplaintScreen,
   ComplaintSummaryScreen,
 } from '../screens/Complaints';
+import {
+  DuesByFlatScreen,
+  FlatLedgerScreen,
+  SendRemindersScreen,
+  RecordPaymentScreen,
+  AddChargeOrWaiverScreen,
+  ExpenseSummaryScreen,
+  AddExpenseScreen,
+  ExpenseApprovalScreen,
+  ReportsSummaryScreen,
+} from '../screens/Money';
 
 const Stack = createNativeStackNavigator<SCREENPARAMS>();
 const Routes = () => {
@@ -162,6 +182,51 @@ const Routes = () => {
         <Stack.Screen
           name={COMPLAINT_SUMMARY_SCREEN}
           component={ComplaintSummaryScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={DUES_BY_FLAT_SCREEN}
+          component={DuesByFlatScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={FLAT_LEDGER_SCREEN}
+          component={FlatLedgerScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={SEND_REMINDERS_SCREEN}
+          component={SendRemindersScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={RECORD_PAYMENT_SCREEN}
+          component={RecordPaymentScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={ADD_CHARGE_OR_WAIVER_SCREEN}
+          component={AddChargeOrWaiverScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={EXPENSE_SUMMARY_SCREEN}
+          component={ExpenseSummaryScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={ADD_EXPENSE_SCREEN}
+          component={AddExpenseScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={EXPENSE_APPROVAL_SCREEN}
+          component={ExpenseApprovalScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={REPORTS_SUMMARY_SCREEN}
+          component={ReportsSummaryScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

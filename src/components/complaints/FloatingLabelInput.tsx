@@ -19,6 +19,8 @@ export interface FloatingLabelInputProps {
   multiline?: boolean;
   prefix?: string;
   keyboardType?: KeyboardTypeOptions;
+  rightIcon?: React.ReactNode;
+  editable?: boolean;
   containerStyle?: StyleProp<ViewStyle>;
 }
 
@@ -30,6 +32,8 @@ const FloatingLabelInput: React.FC<FloatingLabelInputProps> = ({
   multiline = false,
   prefix,
   keyboardType = 'default',
+  rightIcon,
+  editable = true,
   containerStyle,
 }) => {
   return (
@@ -52,7 +56,9 @@ const FloatingLabelInput: React.FC<FloatingLabelInputProps> = ({
           placeholderTextColor={COLORS.placeholder}
           multiline={multiline}
           keyboardType={keyboardType}
+          editable={editable}
         />
+        {rightIcon ? <View style={styles.rightIcon}>{rightIcon}</View> : null}
       </View>
     </View>
   );
@@ -112,5 +118,10 @@ const styles = StyleSheet.create({
   multilineInput: {
     textAlignVertical: 'top',
     minHeight: hp(8.5),
+  },
+  rightIcon: {
+    marginLeft: wp(2),
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

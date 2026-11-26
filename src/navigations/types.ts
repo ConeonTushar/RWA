@@ -21,9 +21,19 @@ import {
   ASSIGN_COMPLAINT_SCREEN,
   UPDATE_COMPLAINT_SCREEN,
   COMPLAINT_SUMMARY_SCREEN,
+  DUES_BY_FLAT_SCREEN,
+  FLAT_LEDGER_SCREEN,
+  SEND_REMINDERS_SCREEN,
+  RECORD_PAYMENT_SCREEN,
+  ADD_CHARGE_OR_WAIVER_SCREEN,
+  EXPENSE_SUMMARY_SCREEN,
+  ADD_EXPENSE_SCREEN,
+  EXPENSE_APPROVAL_SCREEN,
+  REPORTS_SUMMARY_SCREEN,
 } from './url';
 import type { ApprovalItemData } from '../components/approvals';
 import type { ComplaintItemData } from '../components/complaints';
+import type { ExpenseRecordItem, FlatDueItem } from '../components/money';
 
 export interface RequestMoreInfoScreenParams {
   item?: ApprovalItemData;
@@ -54,6 +64,17 @@ export type SCREENPARAMS = {
   [ASSIGN_COMPLAINT_SCREEN]: { item?: ComplaintItemData } | undefined;
   [UPDATE_COMPLAINT_SCREEN]: { item?: ComplaintItemData } | undefined;
   [COMPLAINT_SUMMARY_SCREEN]: undefined;
+  [DUES_BY_FLAT_SCREEN]: undefined;
+  [FLAT_LEDGER_SCREEN]: { flat?: FlatDueItem } | undefined;
+  [SEND_REMINDERS_SCREEN]:
+    | { selectedCount?: number; overdueCount?: number }
+    | undefined;
+  [RECORD_PAYMENT_SCREEN]: { flat?: FlatDueItem } | undefined;
+  [ADD_CHARGE_OR_WAIVER_SCREEN]: { flat?: FlatDueItem } | undefined;
+  [EXPENSE_SUMMARY_SCREEN]: undefined;
+  [ADD_EXPENSE_SCREEN]: undefined;
+  [EXPENSE_APPROVAL_SCREEN]: { expense?: ExpenseRecordItem } | undefined;
+  [REPORTS_SUMMARY_SCREEN]: undefined;
 };
 
 export const navigationRef: any = React.createRef();

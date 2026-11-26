@@ -34,4 +34,15 @@ export const ASSIGN_COMPLAINT_SCREEN = 'AssignComplaintScreen';
 export const UPDATE_COMPLAINT_SCREEN = 'UpdateComplaintScreen';
 export const COMPLAINT_SUMMARY_SCREEN = 'ComplaintSummaryScreen';
 
+// Money screens
+export const DUES_BY_FLAT_SCREEN = 'DuesByFlatScreen';
+export const FLAT_LEDGER_SCREEN = 'FlatLedgerScreen';
+export const SEND_REMINDERS_SCREEN = 'SendRemindersScreen';
+export const RECORD_PAYMENT_SCREEN = 'RecordPaymentScreen';
+export const ADD_CHARGE_OR_WAIVER_SCREEN = 'AddChargeOrWaiverScreen';
+export const EXPENSE_SUMMARY_SCREEN = 'ExpenseSummaryScreen';
+export const ADD_EXPENSE_SCREEN = 'AddExpenseScreen';
+export const EXPENSE_APPROVAL_SCREEN = 'ExpenseApprovalScreen';
+export const REPORTS_SUMMARY_SCREEN = 'ReportsSummaryScreen';
+
 
